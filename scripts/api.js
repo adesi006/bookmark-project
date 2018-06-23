@@ -9,7 +9,7 @@ const api = (function(){
     }
 
     //This Func will create items to post
-    const createBookmark2Post = function(info, callback){
+    const postBookmark = function(info, callback){
         const preppedInfo= JSON.stringify(info);
         $.ajax({
             url:`${BASE_URL}/bookmarks`,
@@ -22,10 +22,5 @@ const api = (function(){
     
     
     
-    
-    
-    
-    
-    
-    return {getObjFromAPI, createBookmark2Post}
+    return {getObjFromAPI, postBookmark}
 }())

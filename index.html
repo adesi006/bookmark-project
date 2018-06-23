@@ -13,7 +13,7 @@
 <header>
     <div><h1 role="banner">Your Bookmarks</h1></div>
         
-    <button name="create-bookmark" class="js-create-bookmark accordion">Create Bookmark</button>
+    <button name="create-bookmark" class="accordion">Create Bookmark</button>
 
 <!--PANEL FOR CREATOR-->
     <div class ="js-creator-panel panel">
@@ -33,13 +33,13 @@
                 <option value="5 star">5 star</option>  
             </select>
             <label for="create-description" class ="description-box">Description</label>
-            <textarea type="text" rows="3" cols="50" placeholder="Describe your bookmark" id="create-description" class="js-create-description" required></textarea><br>
+            <textarea type="text" rows="3" cols="50" placeholder="Describe your bookmark" id="create-description" class="js-create-description"></textarea><br>
             <input type="submit" class="js-submit-bookmark" >
         </form>
     </div>
     <!--SORT BY RATING BUTTON AND TOGGLER-->
     <label for="sorter">Sort by Rating</label>
-        <select name="create-rating" id="create-rating" required>
+        <select name="create-rating" id="create-rating">
             <option value="1 star">1 star</option> 
             <option value="2 star">2 star</option>
             <option value="3 star">3 star</option>
@@ -61,6 +61,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="scripts/store.js"></script>
 <script type="text/javascript" src="scripts/api.js"></script>
+<script type="text/javascript" src="scripts/bookmark-list.js"></script>
 <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>
