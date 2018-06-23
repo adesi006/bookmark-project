@@ -1,5 +1,5 @@
 .accordion {
-    background-color: white;
+    background-color: #eee;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -9,13 +9,18 @@
     outline: none;
     transition: 0.4s;
 }
-.description-box{
-    display:block;
+
+.active .accordion:hover {
+    background-color: #ccc;
 }
 
-.creator-panel {
+.panel {
     padding: 0 18px;
-    background-color: gainsboro;
-    display: block;
+    background-color: #eee;
+    display: none;
     overflow: hidden;
+}
+
+.description-box{
+    display:block;
 }

@@ -10,28 +10,13 @@
 </head>
 <body>
     <!--Header-->
+<header>
     <div><h1 role="banner">Your Bookmarks</h1></div>
-
-    <!--Expand will not be focusable or clickable, but will activate when "Create bookmark is clicked" to expand the back panel-->
-    <button name="accordion" class="accordion">
-        <button name="create-bookmark" class="js-create-bookmark">Create Bookmark</button>
         
-    <!--The sorting toggler/Eventually change to toggle switch-->
-        <label for="sorter">Sort by Rating</label>
-        <select name="create-rating" id="create-rating" required>
-            <option value="1 star">1 star</option> 
-            <option value="2 star">2 star</option>
-            <option value="3 star">3 star</option>
-            <option value="4 star">4 star</option>
-            <option value="5 star">5 star</option>  
-        </select>
-            <input type="checkbox" name="sort-toggler" value="sort">
-    </button>
-</header>
-
+    <button name="create-bookmark" class="js-create-bookmark accordion">Create Bookmark</button>
 
 <!--PANEL FOR CREATOR-->
-<div class ="js-creator-panel creator-panel">
+    <div class ="js-creator-panel panel">
         <form>
             <label for="create-bookmark-name">Bookmark Name</label>
             <input type="text" class="js-create-name" name="Bookmark Name" id="create-bookmark-name" placeholder="Name your bookmark" required>
@@ -48,37 +33,28 @@
                 <option value="5 star">5 star</option>  
             </select>
             <label for="create-description" class ="description-box">Description</label>
-            <textarea type="text" rows="3" cols="50" placeholder="Describe your bookmark" id="create-description" class="js-create-description" required></textarea>
-            <input type="submit" class="js-submit-bookmark" 
+            <textarea type="text" rows="3" cols="50" placeholder="Describe your bookmark" id="create-description" class="js-create-description" required></textarea><br>
+            <input type="submit" class="js-submit-bookmark" >
         </form>
-</div>
-    </header>
-
+    </div>
+    <!--SORT BY RATING BUTTON AND TOGGLER-->
+    <label for="sorter">Sort by Rating</label>
+        <select name="create-rating" id="create-rating" required>
+            <option value="1 star">1 star</option> 
+            <option value="2 star">2 star</option>
+            <option value="3 star">3 star</option>
+            <option value="4 star">4 star</option>
+            <option value="5 star">5 star</option>  
+        </select>
+            <input type="checkbox" name="sort-toggler" value="sort">
+</header>
+<hr>
 
     <!--This section is the HTML for when the Create button has been-->
     
 <main role="main">
     <!--Bookmark condensation will refer to accordion CSS in final stretch-->
     <ul name="bookmarks section" class="bookmark-holder js-bookmark-holder">
-        <li>
-        <!--button for individual bookmark panel-->    
-        <button class="bookmark js-bookmark-panel accordion" name="bookmark">Bookmark Title
-        <!--Individual Bookmark rating Selector-->
-        <select name = "bookmark-rating">
-                <option value="1 star">1 star</option> 
-                <option value="2 star">2 star</option>
-                <option value="3 star">3 star</option>
-                <option value="4 star">4 star</option>
-                <option value="5 star">5 star</option>  
-        </select>
-        </button>
-            <div class="bookmark-details-panel">
-                <a href="testurl.com">TestURL.com</a>
-                <a href="testurl.com"><button>Visit link</button></a>
-                
-                <button class="delete-button">Delete</button>
-            </div>
-        </li>    
     </ul>
 </main>
 
