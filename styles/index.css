@@ -24,3 +24,11 @@
 .description-box{
     display:block;
 }
+
+.js-bookmark-description{
+    border: 2px solid gainsboro;
+}
+
+.js-hidden{
+    display: none;
+}

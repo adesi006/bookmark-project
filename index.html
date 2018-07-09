@@ -5,27 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SiteStash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/index.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/skeleton.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="styles/index.css" /> -->
 </head>
 <body>
     <!--Header-->
-<header>
-    <div><h1 role="banner">Your Bookmarks</h1></div>
+
+    <header role="banner"><h1>Your Bookmarks</h1></header>
         
+<section role = "region">
+    <!--how to hide but keep in screenreader-->
+    <h2>Manage Bookmarks</h2>
     <button name="create-bookmark" class="accordion">Create Bookmark</button>
 
 <!--PANEL FOR CREATOR-->
-    <div class ="js-creator-panel panel">
+    <!-- why the div? -->
+    <aside class ="js-creator-panel panel" role ="complementary" hidden>
+        <!-- form requirements?? value = "#" name? -->
         <form>
             <label for="create-bookmark-name">Bookmark Name</label>
             <input type="text" class="js-create-name" name="Bookmark Name" id="create-bookmark-name" placeholder="Name your bookmark" required>
             
             <label for="add-url">Bookmark URL</label>
-            <input type="text" class="js-create-url" name="Add URL" placeholder="Place URL here" id="add-url" required>
+            <input type="url" class="js-create-url" name="Add URL" placeholder="Place URL here" id="add-url" required>
 
-            <label for="sorter">Rating</label>
-            <select name="create-rating" id="create-rating" class="js-create-rating" required>
+            <label for="rating">Rating</label>
+            <select name="create-rating" id="rating" class="js-create-rating" required>
                 <option value="1 star">1 star</option> 
                 <option value="2 star">2 star</option>
                 <option value="3 star">3 star</option>
@@ -34,27 +39,32 @@
             </select>
             <label for="create-description" class ="description-box">Description</label>
             <textarea type="text" rows="3" cols="50" placeholder="Describe your bookmark" id="create-description" class="js-create-description"></textarea><br>
-            <input type="submit" class="js-submit-bookmark" >
+            <input type="submit" value="create bookmark" class="js-submit-bookmark" >
         </form>
-    </div>
+    </aside>
     <!--SORT BY RATING BUTTON AND TOGGLER-->
-    <label for="sorter">Sort by Rating</label>
-        <select name="create-rating" id="create-rating">
+    <div class="js-sort-container">
+    <label for="sort-selector">Sort by Rating</label>
+        <select name="sort-selector" id="sort-selector" class="js-sort-selector">
             <option value="1 star">1 star</option> 
             <option value="2 star">2 star</option>
             <option value="3 star">3 star</option>
             <option value="4 star">4 star</option>
             <option value="5 star">5 star</option>  
         </select>
-            <input type="checkbox" name="sort-toggler" value="sort">
-</header>
+        <!-- label sort toggler -->
+            <input type="checkbox" name="sort-toggler" class="sort-toggler" id >
+    </div>
+</section>
+
 <hr>
 
     <!--This section is the HTML for when the Create button has been-->
     
 <main role="main">
     <!--Bookmark condensation will refer to accordion CSS in final stretch-->
-    <ul name="bookmarks section" class="bookmark-holder js-bookmark-holder">
+    <!-- Look into ARIA live for the value -->
+    <ul name="bookmarks section" class="bookmark-holder js-bookmark-holder" >
     </ul>
 </main>
 

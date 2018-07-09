@@ -1,4 +1,7 @@
-$(document).ready(function(){
+$(function(){
+bookmarkHandlers.getAPI()
 bookmarkHandlers.expandCreate();
-bookmarkHandlers.checkErrorsAndPost()
+bookmarkHandlers.checkErrorsAndPost();
+bookmarkHandlers.activateSortBy();
+bookmarkHandlers.deleteBookmark();
 }())
